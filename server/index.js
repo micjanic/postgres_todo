@@ -60,7 +60,7 @@ app.put("/todos/:id", async (req, res) => {
 
     res.json(updateTodo.rows[0]);
   } catch (err) {
-    console.error(err);
+    console.error(err.message);
   }
 });
 
@@ -74,7 +74,7 @@ app.delete("/todos/:id", async (req, res) => {
     );
     res.json(deleteTodo.rows[0]);
   } catch (err) {
-    console.error(err);
+    console.error(err.message);
   }
 });
 
